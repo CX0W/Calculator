@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Calculator{
+    height:300px;
+    width:300px;
+    display:flex;
+    background-color: beige;
+    flex-direction: column;
+}
+.numDiv{
+    width:auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.num{
+    width:40px;
+    background-color: red;
+    border:black;
+    text-align: center;
+}
+#display{
+    height:50px;
+    background-color: azure;
+}
