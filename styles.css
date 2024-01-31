@@ -1,28 +1,110 @@
-body{
+/*body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #3b4664;
 }
-.Calculator{
-    height:300px;
-    width:300px;
+.calculator {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #181f32;
     display:flex;
-    background-color: beige;
+    flex-direction:column;
+}
+.main-display {
+    background-color: #181f32;
+    display:flex;
+    flex:0.2;
+    color:beige;
+    justify-content:space-between;
+    align-items:center;
+}
+.num-container{
+    display:flex;
+    flex:1;
+    flex-wrap:wrap;
+}
+.num, .op, .result,.clear,.plusminus{
+    width:50px;
+    height:50px;
+    background-color:beige;
+    border: 2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}*/
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b4664;
+    font-family: Arial, sans-serif;
+    flex-direction:column;
+}
+
+.calculator {
+    border: 2px solid #181f32;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1a1f32;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height:400px;
+    width:300px;
+}
+
+.main-display {
+    background-color: #181f32;
+    padding: 10px;
+    color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    height:65px;
+    flex-direction:row;
+    justify-content:flex-end;
+}
+
+div .num-container {
+    display:flex;
+}
+
+.num, .op, .result, .clear, .plusminus {
+    flex: 1 0 25%; /* Distribute the buttons equally, with a max-width of 25% */
+    height: 70px;
+    background-color: #2b3148;
+    border: 1px solid #181f32;
+    color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.num:hover, .op:hover, .result:hover, .clear:hover, .plusminus:hover {
+        background-color: #3b4664;
+}
+
+.box {
+    display: flex;
+    flex-grow: 1;
     flex-direction: column;
 }
-.numDiv{
-    width:auto;
+.num-container{
     display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    height:318px;
 }
-.num{
-    width:40px;
-    background-color: red;
-    border:black;
-    text-align: center;
-}
-#display{
-    height:50px;
-    background-color: azure;
+.bigd{
+    overflow:hidden;
 }
