@@ -114,3 +114,16 @@ function popsmalldisplay(x) {
         checkoperatorchange(x);
     }
 }
+
+//Keyboard Support
+document.addEventListener('keydown', (ev) => {
+        const key = ev.key;
+        if (/^[0-9]$/.test(key)) {
+            popbigdisplay(key);
+        } else if (/^[+*/-]$/.test(key)) {
+            popsmalldisplay(key);
+        } else if (key === 'Enter') {
+            getresult();
+        }
+});
+    
